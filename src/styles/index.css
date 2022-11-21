@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * outline styles
  */
@@ -15,7 +14,7 @@
 }
 
 .djs-element.selected .djs-outline {
-  stroke: #8888ff;
+  stroke: #8888FF;
   stroke-width: 1px;
 }
 
@@ -25,7 +24,7 @@
 }
 
 .djs-shape.connect-ok .djs-visual > :nth-child(1) {
-  fill: #dcfecc !important;
+  fill: #DCFECC !important;
 }
 
 .djs-shape.connect-not-ok .djs-visual > :nth-child(1),
@@ -34,7 +33,7 @@
 }
 
 .djs-shape.new-parent .djs-visual > :nth-child(1) {
-  fill: #f7f9ff !important;
+  fill: #F7F9FF !important;
 }
 
 svg.drop-not-ok {
@@ -42,17 +41,17 @@ svg.drop-not-ok {
 }
 
 svg.new-parent {
-  background: #f7f9ff !important;
+  background: #F7F9FF !important;
 }
 
 .djs-connection.connect-ok .djs-visual > :nth-child(1),
 .djs-connection.drop-ok .djs-visual > :nth-child(1) {
-  stroke: #90dd5f !important;
+  stroke: #90DD5F !important;
 }
 
 .djs-connection.connect-not-ok .djs-visual > :nth-child(1),
 .djs-connection.drop-not-ok .djs-visual > :nth-child(1) {
-  stroke: #e56283 !important;
+  stroke: #E56283 !important;
 }
 
 .drop-not-ok,
@@ -211,7 +210,7 @@ svg.new-parent {
  * snapping
  */
 .djs-snap-line {
-  stroke: #ffc342;
+  stroke: rgb(255, 195, 66);
   stroke: rgba(255, 195, 66, 0.5);
   stroke-linecap: round;
   stroke-width: 2px;
@@ -245,7 +244,7 @@ svg.new-parent {
   margin: 0 5px;
   padding-top: 5px;
   border: none;
-  border-bottom: solid 1px #ddd;
+  border-bottom: solid 1px #DDD;
   clear: both;
 }
 
@@ -273,7 +272,7 @@ svg.new-parent {
 }
 
 .djs-palette .djs-palette-entries:after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -343,9 +342,9 @@ svg.new-parent {
   border-radius: 3px;
   cursor: default;
   background-color: transparent;
-  box-shadow: 0 0 2px 1px #fefefe;
+  box-shadow: 0 0 2px 1px #FEFEFE;
   pointer-events: all;
-  color: #4c6aa7;
+  color: #4C6AA7;
 }
 
 .djs-context-pad .entry:before {
@@ -400,7 +399,7 @@ svg.new-parent {
 .djs-popup .djs-popup-header .entry.active {
   color: #3b7cff;
   border: solid 1px #3b7cff;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 
 .djs-popup-body .entry {
@@ -412,11 +411,11 @@ svg.new-parent {
 }
 
 .djs-popup-body {
-  background-color: #fefefe;
+  background-color: #FEFEFE;
 }
 
 .djs-popup-header {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #DDD;
 }
 
 .djs-popup-header .entry {
@@ -431,10 +430,9 @@ svg.new-parent {
 /**
  * popup / palette styles
  */
-.djs-popup,
-.djs-palette {
-  background: #fafafa;
-  border: solid 1px #ccc;
+.djs-popup, .djs-palette {
+  background: #FAFAFA;
+  border: solid 1px #CCC;
   border-radius: 2px;
 }
 
@@ -556,11 +554,11 @@ svg.new-parent {
 
 .djs-tooltip-error > * {
   width: 160px;
-  background: #fcecf0;
-  color: #9e4c4c;
+  background: rgb(252, 236, 240);
+  color: rgb(158, 76, 76);
   padding: 3px 7px;
   border-radius: 5px;
-  border-left: solid 5px #ae4949;
+  border-left: solid 5px rgb(174, 73, 73);
 }
 
 .djs-tooltip-error:hover {
@@ -583,8 +581,8 @@ svg.new-parent {
   z-index: 10;
   font-size: 1.05em;
   opacity: 0.9;
-  background: #fafafa;
-  border: solid 1px #ccc;
+  background: #FAFAFA;
+  border: solid 1px #CCC;
   border-radius: 2px;
 }
 
@@ -601,7 +599,7 @@ svg.new-parent {
 
 .djs-search-input input:focus {
   outline: none;
-  border-color: #52b415;
+  border-color: #52B415;
 }
 
 .djs-search-results {
@@ -619,7 +617,7 @@ svg.new-parent {
   width: 100%;
   padding: 6px 10px;
   background: white;
-  border-bottom: solid 1px #aaa;
+  border-bottom: solid 1px #AAA;
   border-radius: 1px;
 }
 
@@ -664,13 +662,11 @@ svg.new-parent {
 }
 
 @font-face {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2)
-    format('woff2');
+  src: url(https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format("woff2");
 }
-
 .djs-minimap {
   position: absolute;
   top: 20px;
@@ -716,9 +712,9 @@ svg.new-parent {
 }
 
 .djs-minimap:not(.open) .toggle:before {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-size: 25px;
-  content: '\e55b';
+  content: "\e55b";
   cursor: pointer;
 }
 
@@ -755,9 +751,9 @@ svg.new-parent {
 }
 
 .djs-minimap.open .toggle:before {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-size: 25px;
-  content: '\e14c';
+  content: "\e14c";
 }
 
 .djs-minimap .map {
@@ -803,15 +799,13 @@ svg.new-parent {
   width: 96px;
 }
 
-.djs-popup,
-.djs-palette {
+.djs-popup, .djs-palette {
   background: #ebebeb;
   border: solid 2px #e0e0e0;
   border-radius: 8px;
 }
 
-.djs-palette .entry,
-.djs-palette .djs-palette-toggle {
+.djs-palette .entry, .djs-palette .djs-palette-toggle {
   color: #4c6aa7;
 }
 
@@ -834,9 +828,9 @@ svg.new-parent {
 }
 
 .action-button-fit:before {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-size: 25px;
-  content: '';
+  content: "\e1b4";
 }
 
 .action-button-fit:hover {
@@ -866,9 +860,9 @@ svg.new-parent {
 }
 
 .action-button-zoom-in:before {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-size: 25px;
-  content: '';
+  content: "\e145";
 }
 
 .action-button-zoom-in:hover {
@@ -898,9 +892,9 @@ svg.new-parent {
 }
 
 .action-button-zoom-out:before {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-size: 25px;
-  content: '';
+  content: "\e15b";
 }
 
 .action-button-zoom-out:hover {
@@ -930,9 +924,9 @@ svg.new-parent {
 }
 
 .action-button-full-screen:before {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-size: 25px;
-  content: '';
+  content: "\e5d0";
 }
 
 .action-button-full-screen:hover {
@@ -962,9 +956,9 @@ svg.new-parent {
 }
 
 .action-button-full-screen-exit:before {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-size: 25px;
-  content: '';
+  content: "\e5d1";
 }
 
 .action-button-full-screen-exit:hover {
@@ -979,6 +973,15 @@ svg.new-parent {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: relative;
+}
+
+.content .properties {
+  position: absolute;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  overflow-y: auto;
 }
 
 /* FIX CONTEXT PAD ENTRIES */
@@ -993,7 +996,7 @@ svg.new-parent {
   width: 100%;
   height: 100%;
   background-color: transparent;
-  fill: #d7d7d7;
+  fill: rgb(215, 215, 215);
   background-size: 59px 59px;
   background-repeat: repeat;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500' fill-opacity='1' style='enable-background:new 0 0 500 500'%3E%3Cstyle%3E .st0{fill:rgb(215, 215, 215)} %3C/style%3E%3Ccircle class='st0' cy='336.6' r='12.7'/%3E%3Ccircle class='st0' cx='83.3' cy='336.6' r='12.7'/%3E%3Ccircle class='st0' cx='166.7' cy='336.6' r='12.7'/%3E%3Ccircle class='st0' cx='250' cy='336.6' r='12.7'/%3E%3Ccircle class='st0' cx='333.3' cy='336.6' r='12.7'/%3E%3Ccircle class='st0' cx='416.7' cy='336.6' r='12.7'/%3E%3Ccircle class='st0' cx='500' cy='336.6' r='12.7'/%3E%3Cg%3E%3Ccircle class='st0' cy='.7' r='12.7'/%3E%3Ccircle class='st0' cx='83.3' cy='.7' r='12.7'/%3E%3Ccircle class='st0' cx='166.7' cy='.7' r='12.7'/%3E%3Ccircle class='st0' cx='250' cy='.7' r='12.7'/%3E%3Ccircle class='st0' cx='333.3' cy='.7' r='12.7'/%3E%3Ccircle class='st0' cx='416.7' cy='.7' r='12.7'/%3E%3Ccircle class='st0' cx='500' cy='.7' r='12.7'/%3E%3C/g%3E%3Cg%3E%3Ccircle class='st0' cy='419.5' r='12.7'/%3E%3Ccircle class='st0' cx='83.3' cy='419.5' r='12.7'/%3E%3Ccircle class='st0' cx='166.7' cy='419.5' r='12.7'/%3E%3Ccircle class='st0' cx='250' cy='419.5' r='12.7'/%3E%3Ccircle class='st0' cx='333.3' cy='419.5' r='12.7'/%3E%3Ccircle class='st0' cx='416.7' cy='419.5' r='12.7'/%3E%3Ccircle class='st0' cx='500' cy='419.5' r='12.7'/%3E%3C/g%3E%3Cg%3E%3Ccircle class='st0' cy='500.7' r='12.7'/%3E%3Ccircle class='st0' cx='83.3' cy='500.7' r='12.7'/%3E%3Ccircle class='st0' cx='166.7' cy='500.7' r='12.7'/%3E%3Ccircle class='st0' cx='250' cy='500.7' r='12.7'/%3E%3Ccircle class='st0' cx='333.3' cy='500.7' r='12.7'/%3E%3Ccircle class='st0' cx='416.7' cy='500.7' r='12.7'/%3E%3Ccircle class='st0' cx='500' cy='500.7' r='12.7'/%3E%3C/g%3E%3Cg%3E%3Ccircle class='st0' cy='170.9' r='12.7'/%3E%3Ccircle class='st0' cx='83.3' cy='170.9' r='12.7'/%3E%3Ccircle class='st0' cx='166.7' cy='170.9' r='12.7'/%3E%3Ccircle class='st0' cx='250' cy='170.9' r='12.7'/%3E%3Ccircle class='st0' cx='333.3' cy='170.9' r='12.7'/%3E%3Ccircle class='st0' cx='416.7' cy='170.9' r='12.7'/%3E%3Ccircle class='st0' cx='500' cy='170.9' r='12.7'/%3E%3C/g%3E%3Cg%3E%3Ccircle class='st0' cy='253.8' r='12.7'/%3E%3Ccircle class='st0' cx='83.3' cy='253.8' r='12.7'/%3E%3Ccircle class='st0' cx='166.7' cy='253.8' r='12.7'/%3E%3Ccircle class='st0' cx='250' cy='253.8' r='12.7'/%3E%3Ccircle class='st0' cx='333.3' cy='253.8' r='12.7'/%3E%3Ccircle class='st0' cx='416.7' cy='253.8' r='12.7'/%3E%3Ccircle class='st0' cx='500' cy='253.8' r='12.7'/%3E%3C/g%3E%3Cg%3E%3Ccircle class='st0' cy='88' r='12.7'/%3E%3Ccircle class='st0' cx='83.3' cy='88' r='12.7'/%3E%3Ccircle class='st0' cx='166.7' cy='88' r='12.7'/%3E%3Ccircle class='st0' cx='250' cy='88' r='12.7'/%3E%3Ccircle class='st0' cx='333.3' cy='88' r='12.7'/%3E%3Ccircle class='st0' cx='416.7' cy='88' r='12.7'/%3E%3Ccircle class='st0' cx='500' cy='88' r='12.7'/%3E%3C/g%3E%3C/svg%3E");
@@ -1012,3 +1015,5 @@ svg.new-parent {
 .fullscreen {
   background: white;
 }
+
+/*# sourceMappingURL=index.css.map */

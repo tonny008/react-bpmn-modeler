@@ -2,11 +2,13 @@ import React, { useRef, useEffect, FC, useCallback, useState } from 'react'
 import Fullscreen from 'react-full-screen'
 
 import propertiesProviderModule from 'bpmn-js-properties-panel/lib/provider/camunda'
+import propertiesPanelModule from 'bpmn-js-properties-panel'
+
 import BpmnModeler from 'bpmn-js/lib/Modeler'
 import minimapModule from 'diagram-js-minimap'
 import camundaModdleDescriptor from 'camunda-bpmn-moddle/resources/camunda'
 
-import { i18nSpanish } from './translations'
+import { i18nChinese } from './translations'
 import CustomControlsModule, {
   TASK_SETTINGS_EVENT,
   TASK_DOCUMENTATION_EVENT,
@@ -26,11 +28,11 @@ const customTranslateModule = {
   translate: [
     'value',
     (template: string, replacements: { type: string } | undefined): string => {
-      const templateTranslated = i18nSpanish[template] || template
-      if (replacements && i18nSpanish[replacements.type]) {
+      const templateTranslated = i18nChinese[template] || template
+      if (replacements && i18nChinese[replacements.type]) {
         return templateTranslated.replace(
           /{([^}]+)}/g,
-          (): string => `${i18nSpanish[replacements.type]}`
+          (): string => `${i18nChinese[replacements.type]}`
         )
       }
 
@@ -61,6 +63,7 @@ const Bpmn: FC<BpmnType> = ({
   const [isFullScreen, setIsFullScreen] = useState(false)
 
   const canvas = useRef<HTMLDivElement>(null)
+  const properties = useRef<HTMLDivElement>(null)
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   // Button handlers
@@ -188,12 +191,16 @@ const Bpmn: FC<BpmnType> = ({
       keyboard: { bindTo: document },
       additionalModules: [
         propertiesProviderModule,
+        propertiesPanelModule,
         minimapModule,
         customTranslateModule,
         CustomControlsModule
       ],
       moddleExtensions: {
         camunda: camundaModdleDescriptor
+      },
+      propertiesPanel: {
+        parent: properties.current
       },
       height: modelerInnerHeight ? modelerInnerHeight : window.innerHeight
     })
@@ -237,6 +244,7 @@ const Bpmn: FC<BpmnType> = ({
     >
       <div className="content" id="js-drop-zone">
         <div className="canvas" ref={canvas} />
+        <div className="properties" ref={properties} />
         <ActionButton
           actionButtonId="action-button-fit"
           actionButtonClass={`action-button-fit ${actionButtonClassName}`}
